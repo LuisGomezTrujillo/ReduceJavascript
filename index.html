@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de la función Reduce</title>
+  <style>
+    body{
+      width: 100%;
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="app2"></div>
+
+  <script>
+    const app = document.getElementById('app');
+    const app2 = document.getElementById('app2');
+    const totals = [1, 2, 3, 4];
+    app.innerHTML = `
+      <h1>Array: ${totals}</h1>
+      `
+
+    const rta = totals.reduce(( sum, elemnto) => sum + elemnto, 0);
+    app2.innerHTML = `
+      <h1>Reduce: ${rta}</h1>
+      `
+
+  </script>
+</body>
+</html>
