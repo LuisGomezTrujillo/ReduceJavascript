@@ -5,12 +5,27 @@ function prueba(){
    const votos3=document.querySelector('#opcion3');
 
    
-   arreglo=[
+
+   const arreglo=[
               parseInt(votos1.value), 
               parseInt(votos2.value),
               parseInt(votos3.value)
             ];
 
-  const resultado=arreglo.reduce((sum,elemento) => sum +elemento,0);
-  document.getElementById('resultado').innerHTML=resultado; 
+
+   let mayor, indiceMayor;        
+    resultado=arreglo.reduce( (mayor,elemento) => {
+     mayor=Math.max(mayor,elemento);
+     indiceMayor=arreglo.indexOf(mayor)+1;
+     return mayor;
+      }
+    ,0);
+
+   totalVotos=arreglo.reduce( (acumulado,elemento,indice) => {
+     return acumulado+=elemento;
+    
+      }
+    ,0);
+   document.getElementById('resultado').innerHTML='Ganó la opción '+indiceMayor+' con '+resultado+' votos'+' de los '+totalVotos+' realizados'; 
+  
 }
