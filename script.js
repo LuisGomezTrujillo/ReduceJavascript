@@ -6,25 +6,51 @@ function demo(){
 
    //document.getElementById('resultado').innerHTML=parseInt(votos1.value)+parseInt(votos2.value)+parseInt(votos3.value);
 
-   arreglo=[
+   const arreglo=[
               parseInt(votos1.value), 
               parseInt(votos2.value),
               parseInt(votos3.value)
             ];
 
-  const resultado=arreglo.reduce((sum,elemento) => sum +elemento,0);
-  document.getElementById('resultado').innerHTML=resultado; 
+  //  const objeto=[
+  //    {opcion: 'Opcion 1', votos: parseInt(votos1.value)},
+  //    {opcion: 'Opcion 2', votos: parseInt(votos1.value)},
+  //    {opcion: 'Opcion 3', votos: parseInt(votos1.value)}
+  //  ]
+
+             
+  //  const resultado=objeto.reduce( (mayor,elemento) => {
+  //    mayor=Math.max(mayor,elemento);
+  //    indiceMayor=objeto.indexOf(mayor);
+  //    return mayor;
+  //     }
+  //   ,0);
+
+  //  totalVotos=objeto.reduce( (acumulado,elemento) => {
+  //    return acumulado+=elemento;
+    
+  //     }
+  //   ,0);
+  //  document.getElementById('resultado').innerHTML='Ganó la '+objeto[indiceMayor].opcion+' con '+objeto[indiceMayor].votos+' votos'+' de los '+totalVotos+' realizados'; 
+  
+
+
+
+
+
+   let mayor, indiceMayor;        
+    resultado=arreglo.reduce( (mayor,elemento) => {
+     mayor=Math.max(mayor,elemento);
+     indiceMayor=arreglo.indexOf(mayor)+1;
+     return mayor;
+      }
+    ,0);
+
+   totalVotos=arreglo.reduce( (acumulado,elemento,indice) => {
+     return acumulado+=elemento;
+    
+      }
+    ,0);
+   document.getElementById('resultado').innerHTML='Ganó la opción '+indiceMayor+' con '+resultado+' votos'+' de los '+totalVotos+' realizados'; 
+  
 }
-
-
-// const app = document.getElementById('app');
-//     const app2 = document.getElementById('app2');
-//     const totals = [1, 2, 3, 4];
-//     app.innerHTML = `
-//       <h1>Array: ${totals}</h1>
-//       `
-
-//     const rta = totals.reduce(( sum, elemnto) => sum + elemnto, 0);
-//     app2.innerHTML = `
-//       <h1>Reduce: ${rta}</h1>
-//       `
