@@ -7,38 +7,55 @@
   <title>Ejemplo votaciones</title>
   <link rel="stylesheet" href="./styles.css">  
 </head>
+
 <body>
-  <main>
-    <h1>Ejemplo de Método REDUCE de Javascript en sistema de Votaciones</h1>
+  <header class="encabezado">
+    <img src="./images/logo_jumpforce.png" alt="Logo JumpForce" class="logo">
+  </header>
+  <main class="principal">
+    <section class="titulo">
+      <h1 class="titulo1">Ejemplo de Método REDUCE de Javascript en sistema de Votaciones</h1>
+    </section>
     <section class="votaciones">
-      <h2>Opciones</h2>
-      <div>
-        <label for="opcion1">Opción 1 (Votos):</label>
-        <input type="number" id="opcion1" name="opcion1" min="0" max="100">
+      <h2 class="titulo2">Opciones</h2>
+      <div class="contenido">
+        <div class="entrada">
+          <label for="opcion1">
+            <span>Opción 1 (Votos):</span>
+            <input type="number" id="opcion1" name="opcion1" min="0" max="10"> 
+          </label>
+          
+        </div>
+        <div class="entrada">
+          <label for="opcion2">
+            <span>Opción 2 (Votos):</span>
+            <input type="number" id="opcion2" name="opcion2" min="0" max="10"> 
+          </label>
+          
+        </div>
+        <div class="entrada">
+          <label for="opcion3">
+            <span>Opción 3 (Votos):</span> 
+            <input type="number" id="opcion3" name="opcion3" min="0" max="10">
+          </label>
+          
+        </div>
       </div>
-      <div>
-        <label for="opcion2">Opción 2 (Votos):</label>
-        <input type="number" id="opcion2" name="opcion2" min="0" max="100">
-      </div>
-      <div>
-        <label for="opcion3">Opción 3 (Votos):</label>
-        <input type="number" id="opcion3" name="opcion3" min="0" max="100">
-      </div>
-
-
-
-      <div>
-        <button type="button"
-        onclick="prueba()">
-        Presione para ver los resultados.</button>
-      </div>
-      
+       
 
     </section>
-    <h2>Resultados</h2>
-    
 
-  <p id="resultado"></p>
+    <section class="resultados">
+      <h2 class="titulo2">Resultados</h2>
+      <div class="contenido">
+        <div class="entrada">
+          <button type="button" onclick="prueba()" class="boton">
+          Presione para ver los resultados.</button>
+        </div> 
+        <span id="resultado"></span>
+      </div>
+      
+      <!-- <p id="resultado"></p> -->
     </section>
   </main>
 
