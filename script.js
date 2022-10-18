@@ -1,31 +1,29 @@
 function prueba(){
    
-   const votos1=document.querySelector('#opcion1');
-   const votos2=document.querySelector('#opcion2');
-   const votos3=document.querySelector('#opcion3');
+    const arreglo=[
+              parseInt(document.querySelector('#opcion1').value), 
+              parseInt(document.querySelector('#opcion2').value),
+              parseInt(document.querySelector('#opcion3').value)
+            ];
+  
 
+
+    let VotosGanador;        
+      votosGanador=arreglo.reduce( (mayor,elemento) => {
+      mayor=Math.max(mayor,elemento);     
+      return mayor;
+        }
+      ,0);
    
 
-   const arreglo=[
-              parseInt(votos1.value), 
-              parseInt(votos2.value),
-              parseInt(votos3.value)
-            ];
-
-
-   let mayor, indiceMayor;        
-    resultado=arreglo.reduce( (mayor,elemento) => {
-     mayor=Math.max(mayor,elemento);
-     indiceMayor=arreglo.indexOf(mayor)+1;
-     return mayor;
-      }
-    ,0);
-
-   totalVotos=arreglo.reduce( (acumulado,elemento,indice) => {
-     return acumulado+=elemento;
+    opcionGanadora=arreglo.indexOf(votosGanador)+1;
     
-      }
-    ,0);
-   document.getElementById('resultado').innerHTML='Ganó la opción '+indiceMayor+' con '+resultado+' votos'+' de los '+totalVotos+' realizados'; 
+
+    totalVotos=arreglo.reduce( (acumulado,elemento) => {
+      return acumulado+=elemento;
+      
+        }
+      ,0);
+    document.getElementById('resultado').innerHTML='Ganó la opción '+opcionGanadora+' con '+votosGanador+' votos'+' de los '+totalVotos+' realizados'; 
   
 }

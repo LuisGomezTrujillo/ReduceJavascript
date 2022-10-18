@@ -1,8 +1,16 @@
-body{
-    width: 100%;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+*{
+
+}
+
+html {
+  
+}
+
+body {
+        width: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
