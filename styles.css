@@ -1,0 +1,104 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+    
+html {
+        font-size: 62.5%;
+}
+
+body {
+        width: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+   
+.encabezado {      
+      width: 100%;
+      background-color: #262626;
+      display: flex;
+      flex-wrap: wrap;   
+}
+
+.logo {
+      background-color: #262626;
+      padding: 20px;
+      width: 150px;
+      align-content: center;
+      
+}
+
+.principal {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #464646;
+}
+
+.titulo {
+        background-color: #fc3c23;
+        color: white;
+        font-size: 4rem;
+        padding: 20px;
+        width: 100%;
+        min-width: 150px;
+}
+
+
+.titulo1 {
+        background-color: #fc3c23;
+        color: white;
+        font-size: 4rem;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr ;
+}
+
+.titulo2 {
+        background-color: #0a3c91;
+        color: white;
+        font-size: 3rem;
+        padding: 20px;
+}
+
+.votaciones{
+        padding: 20px;
+}
+
+.resultados{
+        padding: 20px;
+}
+
+section{
+        font-size: 3rem;
+        background-color: #262626;
+        width: 50%;
+}
+
+.contenido{
+        padding: 20px;
+}
+
+
+label {
+        font-size: inherit;
+        color: white;
+}
+
+span {
+        color: white;
+        font-size: 2rem;
+}
+
+.boton {
+        background-color: #ba1e68 ;
+        color: white;
+        border-color : white;
+        min-width: max-content;
+        min-height: max-content;
+        padding: 10px;
+}

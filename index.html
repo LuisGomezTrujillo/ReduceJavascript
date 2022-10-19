@@ -4,36 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de la función Reduce</title>
-  <style>
-    body{
-      width: 100%;
-      background-color: whitesmoke;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
+  <title>Ejemplo votaciones</title>
+  <link rel="stylesheet" href="./styles.css">  
 </head>
+
 <body>
+  <header class="encabezado">
+    <img src="./images/logo_jumpforce.png" alt="Logo JumpForce" class="logo">
+  </header>
+  <main class="principal">
+    <section class="titulo">
+      <h1 class="titulo1">Ejemplo de Método REDUCE de Javascript en sistema de Votaciones</h1>
+    </section>
+    <section class="votaciones">
+      <h2 class="titulo2">Opciones</h2>
+      <div class="contenido">
+        <div class="entrada">
+          <label for="opcion1">
+            <span>Opción 1 (Votos):</span>
+            <input type="number" id="opcion1" name="opcion1" min="0" max="10"> 
+          </label>
+          
+        </div>
+        <div class="entrada">
+          <label for="opcion2">
+            <span>Opción 2 (Votos):</span>
+            <input type="number" id="opcion2" name="opcion2" min="0" max="10"> 
+          </label>
+          
+        </div>
+        <div class="entrada">
+          <label for="opcion3">
+            <span>Opción 3 (Votos):</span> 
+            <input type="number" id="opcion3" name="opcion3" min="0" max="10">
+          </label>
+          
+        </div>
+      </div>
+       
+
+    </section>
+
+    <section class="resultados">
+      <h2 class="titulo2">Resultados</h2>
+      <div class="contenido">
+        <div class="entrada">
+          <button type="button" onclick="prueba()" class="boton">
+          Presione para ver los resultados.</button>
+        </div> 
+        <span id="resultado"></span>
+      </div>
+      
+      <!-- <p id="resultado"></p> -->
+    </section>
+  </main>
+
+  
+
+  
+  
   <div id="app"></div>
   <div id="app2"></div>
 
-  <script>
-    const app = document.getElementById('app');
-    const app2 = document.getElementById('app2');
-    const totals = [1, 2, 3, 4];
-    app.innerHTML = `
-      <h1>Array: ${totals}</h1>
-      `
-
-    const rta = totals.reduce(( sum, elemnto) => sum + elemnto, 0);
-    app2.innerHTML = `
-      <h1>Reduce: ${rta}</h1>
-      `
-
+  <script src="./script.js">
   </script>
 </body>
 
 </html>
+
