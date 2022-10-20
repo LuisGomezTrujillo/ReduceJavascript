@@ -25,13 +25,7 @@ body {
       flex-wrap: wrap;   
 }
 
-.logo {
-      background-color: #262626;
-      padding: 20px;
-      width: 150px;
-      align-content: center;
-      
-}
+
 
 .principal {
       display: flex;
@@ -104,7 +98,83 @@ span {
 }
 .pieDePagina {
         width: 100%;
-        background-color: #262626;
+        background-color: #0a3c91;
         display: flex;
         flex-wrap: wrap; 
+}
+
+.logo {
+        background-color: #262626;
+        width: 150px;
+        align-content: center;
+        
+  }
+
+
+
+  .footerDiv {
+        width: 100%;
+        display: flex;
+        height: 170px;
+  }
+
+  .logoFooter {
+        margin-top: 20px;
+        width: 20%;
+        text-align: center;
+  }
+
+  .logoFoo {
+        
+        height: 150px;
+  }
+
+  
+
+  .text {
+        width: 50%;
+        margin-top: 40px;
+        text-align: center;
+  }
+
+  .nosotros {
+        padding-top: 15px ;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+  };
+
+  .lorem {
+        width: 50%;
+        color: white;
+        font-size: 1.5rem;       
+  }
+
+  .icons {
+        width: 30%;
+        text-align: center;
+  }
+
+  .seguinos {
+        color: white;
+        font-size: 3rem;
+        padding-top: 15px;
+        padding-bottom: 30px;
+  }
+
+  .icon {
+        width: 70px;
+  };
+  
+.derechos {
+        background-color: #ba1e68;
+        
+}
+
+
+.derechosText{
+        
+        font-size:1.5rem ; 
+        background-color: #ba1e68;
+        color: white;
 }
