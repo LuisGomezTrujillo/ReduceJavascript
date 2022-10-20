@@ -17,30 +17,35 @@
       <h1 class="titulo1">Ejemplo de Método REDUCE de Javascript en sistema de Votaciones</h1>
     </section>
     <section class="votaciones">
-      <h2 class="titulo2">Opciones</h2>
-      <div class="contenido">
-        <div class="entrada">
-          <label for="opcion1">
-            <span>Opción 1 (Votos):</span>
-            <input type="number" id="opcion1" name="opcion1" min="0" max="10"> 
-          </label>
-          
-        </div>
-        <div class="entrada">
-          <label for="opcion2">
-            <span>Opción 2 (Votos):</span>
-            <input type="number" id="opcion2" name="opcion2" min="0" max="10"> 
-          </label>
-          
-        </div>
-        <div class="entrada">
-          <label for="opcion3">
-            <span>Opción 3 (Votos):</span> 
-            <input type="number" id="opcion3" name="opcion3" min="0" max="10">
-          </label>
-          
-        </div>
+      
+      <h2 class="titulo2">Elige tu opción</h2>
+      <div class="entrada">
+        <button type="button" onclick="agregarOpcion()" class="boton">
+         Agregar opciones
+        </button>
       </div>
+        <div class="contenido" id="contenidoOpciones">
+          <div class="entrada">
+            <label for="opcion1">
+              <span>Opción 1 (Votos):</span>
+              <input type="number" id="opcion1" name="opcion1" min="0" max="100"> 
+            </label>          
+          </div>
+
+          <div class="entrada">
+            <label for="opcion2">
+              <span>Opción 2 (Votos):</span>
+              <input type="number" id="opcion2" name="opcion2" min="0" max="100"> 
+            </label>            
+          </div>
+          
+        </div>
+        <div class="entrada">
+          <button type="button" onclick="enviarVotos()" class="boton">
+           Votar
+        </div>
+        
+        
        
 
     </section>
@@ -49,7 +54,7 @@
       <h2 class="titulo2">Resultados</h2>
       <div class="contenido">
         <div class="entrada">
-          <button type="button" onclick="prueba()" class="boton">
+          <button type="button" onclick="obtenerResultadosVotaciones()" class="boton">
           Presione para ver los resultados.</button>
         </div> 
         <span id="resultado"></span>
