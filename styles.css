@@ -102,3 +102,9 @@ span {
         min-height: max-content;
         padding: 10px;
 }
+.pieDePagina {
+        width: 100%;
+        background-color: #262626;
+        display: flex;
+        flex-wrap: wrap; 
+}

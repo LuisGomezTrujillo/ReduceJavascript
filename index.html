@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejemplo votaciones</title>
+  <link rel="shortcut icon" href="./images/javascript.png" >
   <link rel="stylesheet" href="./styles.css">  
 </head>
 
@@ -57,6 +58,48 @@
       
       <!-- <p id="resultado"></p> -->
     </section>
+
+    <!-- Calculadora basica Jeison -->
+    <section class="titulo">
+      <h1 class="titulo1">Calculadora Basica</h1>
+    </section>
+    <section class="votaciones">
+      <form class="contenido">
+        <h2 class="titulo2">Numeros</h2>
+        <div class="entrada">
+          <label for="input1">
+            <span>Numero1</span>
+            <input id="input1" type="text" name="input1"> 
+          </label>
+        </div>
+        <div class="entrada">
+          <label for="input2">
+            <span>Numero2</span> 
+            <input id="input2" type="text" name="input2">
+          </label>
+        </div>
+        <div class="entrada">
+          <Button class="boton" type="submit">Reset</Button>
+        </div>
+      </form>
+
+    </section>
+    <section class="resultados">
+        <div class="contenido">
+           <h2 class="titulo2">Operaciones</h2>
+          <div class="entrada">
+            <Button class="boton"id="suma"  type="button">Sumar</Button>
+            <Button class="boton" id="resta"  type="button">Restar</Button>
+            <Button class="boton" id="multiplicacion"  type="button">Multiplicar</Button>
+            <Button class="boton" id="division"  type="button">Dividir</Button>
+          </div>
+          <h2 class="titulo2">Resultado</h2>
+          <span id="r"></span>
+        </div>
+    </section>
+    <footer class="pieDePagina">
+      <img class="logo" src="./images/logo_prospercity.png" alt="logo de prospercity">
+    </footer>    
   </main>
 
   
@@ -65,6 +108,9 @@
   
   <div id="app"></div>
   <div id="app2"></div>
+
+
+
 
   <script src="./script.js">
   </script>
