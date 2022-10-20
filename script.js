@@ -33,8 +33,8 @@ function enviarVotos(){
     arreglo.push(parseInt(document.querySelector('#opcion'+i).value));
   }
   
-
-  console.log(arreglo);
+  document.getElementById('enviado').textContent='Votos enviados para obtener resultados' 
+  
 }
 
 function obtenerResultadosVotaciones(){
