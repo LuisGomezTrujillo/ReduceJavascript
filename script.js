@@ -118,3 +118,25 @@ function dividir() {
     );
     r.innerText = `La respuesta es: ${res3}`;  
 }
+
+// Sumadora de vectores
+let operacion1 =[];
+let suma1 = document.getElementById("suma1");
+let rta = document.getElementById("r1");
+
+suma1.addEventListener("click", sumar1);
+
+
+function sumar1() {
+    let input8 = parseFloat(document.getElementById("input8").value);
+    let input9 = parseFloat(document.getElementById("input9").value);
+    let input10 = parseFloat(document.getElementById("input10").value);
+    let input11 = parseFloat(document.getElementById("input11").value);
+    operacion1.push(input8, input9,input10,input11);
+    
+    let rta = operacion1.reduce(
+        (sum, item) => sum + item,
+        0
+    );
+    r1.innerText = `La respuesta es: ${rta}`;  
+}
