@@ -1,14 +1,45 @@
-function prueba(){
-   
-    const arreglo=[
-              parseInt(document.querySelector('#opcion1').value), 
-              parseInt(document.querySelector('#opcion2').value),
-              parseInt(document.querySelector('#opcion3').value)
-            ];
+let arreglo=[];
+let n=3;
+
+function agregarOpcion(){
   
+  let votaciones=document.querySelector('#contenidoOpciones'); 
+  let divOpcion=document.createElement('div');
+  divOpcion.setAttribute('class','entrada');
+  let labelOpcion=document.createElement('label');
+  labelOpcion.setAttribute('for','opcion'+n);
+  let spanOpcion=document.createElement('span');
+  spanOpcion.textContent='Opcion '+n+' (Votos):  ';
+  let inputOpcion=document.createElement('input');
+  inputOpcion.setAttribute('type','number');
+  inputOpcion.setAttribute('min','0');
+  inputOpcion.setAttribute('max','100');
+  inputOpcion.setAttribute('id','opcion'+n);
+  labelOpcion.appendChild(spanOpcion);
+  labelOpcion.appendChild(inputOpcion);
+  divOpcion.appendChild(labelOpcion);
+  votaciones.appendChild(divOpcion);
+  console.log('n= '+n);
+  n=n+1;
+}
 
+function enviarVotos(){
 
-    let VotosGanador;        
+  arreglo=[];
+  
+  for(let i=1; i<n; i++){
+    console.log(i);
+    
+    arreglo.push(parseInt(document.querySelector('#opcion'+i).value));
+  }
+  
+  document.getElementById('enviado').textContent='Votos enviados para obtener resultados' 
+  
+}
+
+function obtenerResultadosVotaciones(){
+   
+     let VotosGanador;        
       votosGanador=arreglo.reduce( (mayor,elemento) => {
       mayor=Math.max(mayor,elemento);     
       return mayor;
@@ -24,8 +55,8 @@ function prueba(){
       
         }
       ,0);
-    document.getElementById('resultado').innerHTML='Ganó la opción '+opcionGanadora+' con '+votosGanador+' votos'+' de los '+totalVotos+' realizados'; 
-  
+    document.getElementById('resultado').textContent='Ganó la opción '+opcionGanadora+' con '+votosGanador+' votos'+' de los '+totalVotos+' realizados'; 
+  return arreglo;
 }
 
 // Calculadora basica Jeison
@@ -86,4 +117,26 @@ function dividir() {
         (div, item) => div / item,
     );
     r.innerText = `La respuesta es: ${res3}`;  
+}
+
+// Sumadora de vectores
+let operacion1 =[];
+let suma1 = document.getElementById("suma1");
+let rta = document.getElementById("r1");
+
+suma1.addEventListener("click", sumar1);
+
+
+function sumar1() {
+    let input8 = parseFloat(document.getElementById("input8").value);
+    let input9 = parseFloat(document.getElementById("input9").value);
+    let input10 = parseFloat(document.getElementById("input10").value);
+    let input11 = parseFloat(document.getElementById("input11").value);
+    operacion1.push(input8, input9,input10,input11);
+    
+    let rta = operacion1.reduce(
+        (sum, item) => sum + item,
+        0
+    );
+    r1.innerText = `La respuesta es: ${rta}`;  
 }
